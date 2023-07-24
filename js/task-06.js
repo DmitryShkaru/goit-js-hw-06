@@ -7,10 +7,13 @@ const length = Number(inputEl.dataset.length);
 
 function onBlur(e) {
   if (e.currentTarget.value.length === length) {
-    inputEl.classList.add("valid");
-    inputEl.classList.remove("invalid");
+    validInvalid("valid", "invalid");
   } else {
-    inputEl.classList.remove("valid");
-    inputEl.classList.add("invalid");
+    validInvalid("invalid", "valid");
   }
+}
+
+function validInvalid(first, second) {
+  inputEl.classList.add(first);
+  inputEl.classList.remove(second);
 }

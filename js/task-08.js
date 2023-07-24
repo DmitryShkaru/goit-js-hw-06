@@ -9,13 +9,13 @@ function onSubmit(e) {
     elements: { email, password },
   } = e.currentTarget;
 
-  if (email.value === "" || password.value === "") {
-    alert("All input fields must be filled");
+  if (email.value.trim() === "" || password.value.trim() === "") {
+    return alert("All input fields must be filled");
   }
 
   let obj = {};
-  obj.email = `${email.value}`;
-  obj.password = `${password.value}`;
+  obj.email = email.value;
+  obj.password = password.value;
 
   console.log(obj);
 

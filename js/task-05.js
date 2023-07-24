@@ -7,5 +7,5 @@ spanEl.textContent = anonymus;
 inputEl.addEventListener("input", onInput);
 
 function onInput(e) {
-  spanEl.textContent = e.target.value || anonymus;
+  spanEl.textContent = e.target.value.trim() || anonymus;
 }
